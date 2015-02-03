@@ -1,4 +1,3 @@
-console.log('The Iron Yard Rocks');
 
 // Hey Iron Yard Hackers! Enjoy!
 // Make sure to open your js consoles!
@@ -41,6 +40,8 @@ function expect(target) {
 var Dog = function (options) {
 	var options = options || {}; //this doesn't error out
 	this.status = "normal" || options.status;
+	this.color = "black" || options.color; 
+	this.hungry = (false === true) && (false || false);
 }; 
 
 var Human = function (options) {
@@ -54,11 +55,6 @@ var Human = function (options) {
 	};
 };
 // Mason.pet(Sadie);
-
-var Dog = function (options) {
-	this.color = "black" || options.color; 
-	this.hungry =  true || options.hungry;
-};
 
 
 	
