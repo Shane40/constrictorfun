@@ -38,10 +38,32 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 
-// ????????
-// ????????
-// ????????
+var Dog = function (options) {
+	var options = options || {}; //this doesn't error out
+	this.status = "normal" || options.status;
+}; 
 
+var Human = function (options) {
+	var options = options || {}; //this doesn't error out
+	this.cool = options.cool || false; 
+	this.pet = function(dog) {
+	dog.status="happy"; 
+	};
+	this.feed = function (dog) {
+	dog.hungry = false;
+	};
+};
+// Mason.pet(Sadie);
+
+var Dog = function (options) {
+	this.color = "black" || options.color; 
+	this.hungry =  true || options.hungry;
+};
+
+
+	
+// It should make Moonshine no longer hungry when you feed him
+// It should not affect Atticus and Moonshine's owner properties when setting Mason as Sadie's owner
 
 //        __
 //   ____/ /___  ____ ______
