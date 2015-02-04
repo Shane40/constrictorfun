@@ -41,7 +41,7 @@ var Dog = function (options) {
 	var options = options || {}; //this doesn't error out
 	this.status = "normal" || options.status;
 	this.color = "black" || options.color; 
-	this.hungry = (false === true) && (false || false);
+	this.hungry = (options.hungry === false) ? false:true;
 }; 
 
 var Human = function (options) {
